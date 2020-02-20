@@ -8,6 +8,7 @@
     <version>2.2.4.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
+
   <groupId>com.barcoding</groupId>
   <artifactId>episode4-testing</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -15,7 +16,7 @@
   <description>Demo project for Spring Boot</description>
 
   <properties>
-    <java.version>1.8</java.version>
+    <java.version>11</java.version>
   </properties>
 
   <dependencies>
@@ -23,6 +24,19 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.15.0</version>
+      <scope>test</scope>
+    </dependency>
+
 
     <dependency>
       <groupId>com.h2database</groupId>
