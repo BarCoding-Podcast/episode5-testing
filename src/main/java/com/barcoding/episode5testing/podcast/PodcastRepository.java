@@ -1,4 +1,4 @@
-package com.barcoding.episode4testing.podcast;
+package com.barcoding.episode5testing.podcast;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

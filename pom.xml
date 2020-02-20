@@ -10,9 +10,9 @@
   </parent>
 
   <groupId>com.barcoding</groupId>
-  <artifactId>episode4-testing</artifactId>
+  <artifactId>episode5-testing</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>episode4-testing</name>
+  <name>episode5-testing</name>
   <description>Demo project for Spring Boot</description>
 
   <properties>
@@ -53,6 +53,12 @@
           <artifactId>junit-vintage-engine</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.2.3.RELEASE</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 

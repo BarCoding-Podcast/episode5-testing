@@ -1,7 +1,7 @@
-package com.barcoding.episode4testing.utils;
+package com.barcoding.episode5testing.utils;
 
-import com.barcoding.episode4testing.podcast.Podcast;
-import com.barcoding.episode4testing.podcast.PodcastEntity;
+import com.barcoding.episode5testing.podcast.Podcast;
+import com.barcoding.episode5testing.podcast.PodcastEntity;
 
 public class TestData {
   public static final String UNKNOWN_NAME = "unknown_name";
