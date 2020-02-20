@@ -14,12 +14,13 @@ public class PodcastEntity {
   private String name;
   private String twitterHandle;
 
+  public PodcastEntity(){}
+
   public PodcastEntity(Long id, String name, String twitterHandle) {
     this.id = id;
     this.name = name;
     this.twitterHandle = twitterHandle;
   }
-
 
   public PodcastEntity(String name, String twitterHandle) {
     this.name = name;
