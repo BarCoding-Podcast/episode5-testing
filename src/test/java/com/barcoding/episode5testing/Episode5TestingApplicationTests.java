@@ -1,6 +1,8 @@
 package com.barcoding.episode5testing;
 
+import com.barcoding.episode5testing.podcast.PodcastRepository;
 import com.barcoding.episode5testing.podcast.PodcastService;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -22,7 +24,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
 @AutoConfigureMockMvc
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class Episode5TestingApplicationTests {
 
     @Autowired
@@ -31,8 +32,10 @@ class Episode5TestingApplicationTests {
     @Autowired
     private PodcastService podcastService;
 
+    @Autowired
+    private PodcastRepository podcastRepository;
+
     @Test
-    @Order(1)
     void getPodcasts_withNoPodcasts_returnsNoPodcasts() throws Exception {
         mockMvc
             .perform(get("/v1/podcasts"))
@@ -43,7 +46,6 @@ class Episode5TestingApplicationTests {
     }
 
     @Test
-    @Order(2)
     void getPodcasts_withPodcast_returnsPodcasts() throws Exception {
         podcastService.createPodcast(PODCAST);
         mockMvc
@@ -54,4 +56,8 @@ class Episode5TestingApplicationTests {
             );
     }
 
+    @AfterEach
+    void cleanupTestData(){
+        podcastRepository.deleteAll();
+    }
 }
